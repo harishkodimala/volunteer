@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Coniformation</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2>Ride confirmed..!!</h2>
+
+        <a href="index.html" class="btn btn-success mt-3">Go Back to Home</a>
+    </div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        
+        if (message) {
+            document.getElementById('successMessage').textContent = decodeURIComponent(message);
+        }
+    </script>
+</body>
+</html>

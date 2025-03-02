@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2>Registration Successful!</h2>
+        <p id="successMessage">Thank you for registering. We will be in touch soon.</p>
+        <a href="index.html" class="btn btn-success mt-3">Go Back to Home</a>
+    </div>
+
+    <script>
+        // Extract the message from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        
+        if (message) {
+            document.getElementById('successMessage').textContent = decodeURIComponent(message);
+        }
+    </script>
+</body>
+</html>
