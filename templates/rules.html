@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rules and Regulations</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #2C3E50;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    footer {
+      background-color: #2C3E50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Content Styles */
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2C3E50;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    ul, ol {
+      margin: 1rem 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    ul li ul {
+      margin-top: 0.5rem;
+    }
+
+    li b {
+      font-weight: bold;
+      color: #16A085;
+    }
+
+    /* Checkbox & Next Button */
+    label {
+      display: block;
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    #next-button {
+      display: none;
+      background-color: #3498db;
+      width: 200px;
+      padding: 12px;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    #next-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Checkbox Custom Styling */
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      #next-button {
+        width: 150px;
+      }
+
+      footer {
+        padding: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rules and Regulations</h1>
+  </header>
+
+  <main>
+    <section class="rules-section">
+      <h2>General Rules</h2>
+      <ul>
+        <li>Respectful Conduct: Users must treat each other with respect and courtesy. No harassment, bullying, or discriminatory language will be tolerated.</li>
+        <li>Privacy: Do not share personal information of others without their consent. Respect the privacy of all users.</li>
+        <li>Accountability: Users are responsible for their own actions and content they post.</li>
+        <li>Legal Compliance: All activities on the website must comply with applicable laws and regulations.</li>
+        <li>Prohibited Content: The following types of content are prohibited:
+          <ul>
+            <li>Illegal or harmful content</li>
+            <li>Hate speech or discrimination</li>
+            <li>Spam or unsolicited advertising</li>
+            <li>Sexually explicit material</li>
+            <li>Violent or graphic content</li>
+            <li>Copyright infringement</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="rules-section">
+      <h2>Specific Regulations</h2>
+      <ol>
+        <li>Account Registration:
+          <ul>
+            <li>Users must provide accurate information when registering an account.</li>
+            <li>Accounts are for personal use only and cannot be shared or sold.</li>
+          </ul>
+        </li>
+        <li>Content Posting:
+          <ul>
+            <li>Users must own the rights to any content they post.</li>
+            <li>Content must be relevant to the website's purpose.</li>
+            <li>No spamming or flooding the website with irrelevant posts.</li>
+          </ul>
+        </li>
+        <li>Communication:
+          <ul>
+            <li>Use appropriate language in all communications.</li>
+            <li>No impersonation of other users or individuals.</li>
+            <li>Report any abusive or inappropriate behavior.</li>
+          </ul>
+        </li>
+        <li>Intellectual Property:
+          <ul>
+            <li>Respect the intellectual property rights of others.</li>
+            <li>Do not post copyrighted material without permission.</li>
+          </ul>
+        </li>
+        <li>Termination:
+          <ul>
+            <li>The website reserves the right to terminate accounts that violate these rules and regulations.</li>
+          </ul>
+        </li>
+        <li>Ride Booking:
+          <ul>
+            <li><b>Only users above 65 years of age are eligible to book rides.</b></li> 
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <label>
+      <input type="checkbox" id="agree-checkbox" required>
+      I agree to abide by all the rules and regulations stated above.
+    </label>
+
+    <!-- Next Button that becomes visible when the checkbox is checked -->
+    <a href="{{ url_for('elderly') }}" class="btn" id="next-button">Next</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KINDHEART ORGANISATION</p>
+  </footer>
+
+  <script>
+    const checkbox = document.getElementById('agree-checkbox');
+    const nextButton = document.getElementById('next-button');
+
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        nextButton.style.display = 'block'; // Show the next button
+      } else {
+        nextButton.style.display = 'none'; // Hide the next button
+      }
+    });
+  </script>
+</body>
+</html>

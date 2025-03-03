@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Volunteer Driver Network</h1>
+        <h2>Registered Volunteers</h2>
+        <ul>
+            {% for volunteer in volunteers %}
+                <li>Name: {{ volunteer.name }}, Contact: {{ volunteer.contact }}, Availability: {{ volunteer.availability }}</li>
+            {% endfor %}
+        </ul>
+        <br>
+    
+</body>
+</html>

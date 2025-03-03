@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Driver Network</title>
-    <link rel="stylesheet" href="indexcss.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/indexcss.css">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +15,7 @@
     <header>
         <div class="top-bar">
                         <div class="contact-info">
-                <img src="kindh.jpg" alt="kindheart logo" width="45px">
+                <img src="static/kindh.jpg" alt="kindheart logo" width="45px">
 
              <span> <h1 style="color: black;">KINDHEART ORGANISATION
                </h6>
@@ -103,25 +102,26 @@
     </div>
 </div>
 
-<div class="text-center mt-4">
-    <a href="index.html" class="btn btn-primary">Back to Home</a>
-</div>
-</div>
+
+
 <div class="container mt-5">
     <h2>How It Works</h2>
     <p>Are you a volunteer or someone in need of transportation? Sign up below to help make a difference!</p>
 
     <div class="d-flex justify-content-center">
-        <a href="volunteer.html" class="btn btn-success m-2">I'm a Volunteer</a>
-        <a href="elderly.html" class="btn btn-warning m-2">I Need a Ride</a>
+        <a href="/register" class="btn btn-success m-2">I'm a Volunteer</a>
+        <a href="{{ url_for('rules') }}" class="btn btn-warning m-2">I Need a Ride</a>
     </div>
-    <h2>Registered Volunteers</h2>
-<ul>
-    {% for volunteer in volunteers %}
-    <li>Name: {{ volunteer['name'] }}, Contact: {{ volunteer['contact'] }}, Availability: {{ volunteer['availability'] }}</li>
-    {% endfor %}
-</ul>
-
+    <body>
+        <h1>Volunteer Driver Network</h1>
+        <h2>Registered Volunteers</h2>
+        <ul>
+            {% for volunteer in volunteers %}
+                <li>Name: {{ volunteer.name }}, Contact: {{ volunteer.contact }}, Availability: {{ volunteer.availability }}</li>
+            {% endfor %}
+        </ul>
+        <br>
+       
 
 
     <footer class="bg-light text-center py-4">
