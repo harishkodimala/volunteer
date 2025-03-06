@@ -4,24 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Driver Network</title>
-    <link rel="stylesheet" href="static/indexcss.css">
-
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(45deg, #007bff, #6a11cb);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .top-bar .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-bar .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav .nav-bar {
+            margin-top: 20px;
+        }
+
+        nav .nav-bar h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero Image */
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .container {
+            margin-top: 30px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .about-text, .vehicle-info, .areas-covered {
+            margin-bottom: 20px;
+        }
+
+        .about-text h2, .vehicle-info h3, .areas-covered h3 {
+            font-size: 1.8em;
+            color: #007bff;
+        }
+
+        .vehicle-info ul, .areas-covered ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .vehicle-info li, .areas-covered li {
+            margin-bottom: 10px;
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .about-text, .vehicle-info, .areas-covered {
+                margin-bottom: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="top-bar">
-                        <div class="contact-info">
+            <div class="contact-info">
                 <img src="static/kindh.jpg" alt="kindheart logo" width="45px">
-
-             <span> <h1 style="color: black;">KINDHEART ORGANISATION
-               </h6>
-               </span>
-               
-               <br>
+                <h1 style="color: black;">KINDHEART ORGANISATION</h1>
                 <span>&#x260F;</span>
                 <span>7993604056</span>
                 <span class="con">
@@ -36,93 +201,95 @@
             </div>
         </div>
         <nav class="nav-bar">
-            <div class="logo img">
-            </div>
             <h1>Volunteer Driver Network for the Elderly</h1>
             <p>Connecting volunteers with elderly people for safe and reliable transportation</p>
         </nav>
     </header>
 
     <img src="https://img.freepik.com/premium-photo/side-view-couple-sitting-car_1048944-10954016.jpg?ga=GA1.1.904458946.1735908964&semt=ais_hybrid" alt="" width="400">
-    </div>
-
 
     <h1>About Us</h1>
-    <p>Your reliable transportation service for the elderly in Hyderabad.</p>
-</nav>
-</header>
+    <p>Welcome to the Volunteer Driver Network, where we are committed to providing elderly individuals in Hyderabad with safe, reliable, and compassionate transportation services. We understand that mobility can be a challenge for the elderly, and we're here to make sure they get where they need to go with the support of our dedicated volunteers.</p>
 
-<div class="container about-section">
-<div class="row">
-    <div class="col-md-6">
-        <div class="about-text">
-            <h2>Our Fleet and Service Areas</h2>
-            <p>We offer reliable and safe transportation for elderly individuals across Hyderabad. Here are the details:</p>
-        </div>
+    <p>At KINDHEART ORGANISATION, we believe that no one should feel isolated due to lack of transportation. Our goal is to connect volunteers who are willing to drive with elderly individuals in need of transportation, ensuring that they can attend appointments, social events, or run errands with ease and comfort.</p>
 
-        <div class="vehicle-info">
-            <h3>Available Vehicles</h3>
-            <ul>
-                <li>
-                    <strong>Car 1 (SUV)</strong>
-                    <p>Number Plate: XYZ 1234</p>
-                    <p>Type: SWIFT</p>
-                    <p>Areas Covered: Downtown Hyderabad, Hitech City, Kukatpally</p>
-                </li>
-                <li>
-                    <strong>Car 2 (Minivan)</strong>
-                    <p>Number Plate: ABC 5678</p>
-                    <p>Type: SWIFT</p>
-                    <p>Areas Covered: Banjara Hills, Ameerpet, Secunderabad</p>
-                </li>
-            </ul>
-        </div>
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li><strong>Safe and Reliable Transportation:</strong> Our volunteer drivers are trained and vetted to ensure that they provide a safe and reliable service.</li>
+        <li><strong>Serving the Elderly Community:</strong> We focus on helping the elderly community by offering easy-to-use transportation options, whether it’s for medical appointments, grocery shopping, or social events.</li>
+        <li><strong>Convenience and Flexibility:</strong> We offer flexible pick-up and drop-off times to accommodate the schedules of elderly passengers and their families.</li>
+        <li><strong>Compassionate Volunteers:</strong> Our volunteers are carefully selected and trained to provide the highest standard of service with care, patience, and respect for the elderly.</li>
+        <li><strong>Community-Focused:</strong> We are proud to be a community-driven organization, working to enhance the quality of life for the elderly population in Hyderabad.</li>
+    </ul>
 
-        <div class="areas-covered">
-            <h3>Service Areas in Hyderabad</h3>
-            <ul>
-                <li>Downtown Hyderabad</li>
-                <li>Hitech City</li>
-                <li>Kukatpally</li>
-                <li>Banjara Hills</li>
-                <li>Ameerpet</li>
-                <li>Secunderabad</li>
-                <li>Old City (Charminar area)</li>
-                <li>Begumpet</li>
-            </ul>
-        </div>
+    <h2>Our Mission</h2>
+    <p>At KINDHEART ORGANISATION, our mission is to bridge the gap between compassionate volunteers and elderly individuals who need safe and reliable transportation. We are dedicated to enhancing the quality of life for elderly people by ensuring they have the mobility they need to maintain independence, stay connected with their communities, and continue their daily lives with dignity.</p>
 
-        <p class="cta-text">Need a ride? <strong>Contact us today!</strong></p>
-    </div>
+    <p>We understand that transportation can be a significant challenge for the elderly, often limiting access to essential services, social interactions, and healthcare. Through our Volunteer Driver Network, we provide a dependable solution by connecting caring and trained volunteers with seniors who require transportation to medical appointments, social gatherings, errands, and more.</p>
 
-    <div class="col-md-6">
-        <div class="about-image">
-            <img src="https://financialexpresswpcontent.s3.amazonaws.com/uploads/2018/06/Swift-Generations-Main-2-620x413.png" alt="car image">
-        </div>
-    </div>
-</div>
+    <p>Our goal is to create a safe, easy-to-use platform that empowers both volunteers and elderly passengers. Volunteers offer their time and resources to help seniors lead more fulfilling, independent lives, while elderly passengers gain access to a reliable, supportive network of drivers who prioritize their well-being.</p>
 
+    <p>Together, we aim to create a stronger, more compassionate community where the elderly are never left behind due to transportation barriers. Our network of volunteers is the backbone of this initiative, and we are committed to growing it further to meet the needs of seniors across Hyderabad.</p>
 
+    <h2>Join Us Today!</h2>
+    <p>Are you a volunteer looking to make a difference in your community? Or are you in need of transportation? Join our network today and help us make a meaningful impact. Whether you're offering your time or seeking transportation, we’re here to help.</p>
 
-<div class="container mt-5">
-    <h2>How It Works</h2>
-    <p>Are you a volunteer or someone in need of transportation? Sign up below to help make a difference!</p>
-
+    <p>If you'd like to know more or sign up as a volunteer, click the buttons below to get started:</p>
     <div class="d-flex justify-content-center">
         <a href="/register" class="btn btn-success m-2">I'm a Volunteer</a>
         <a href="{{ url_for('rules') }}" class="btn btn-warning m-2">I Need a Ride</a>
     </div>
-    <body>
-        <h1>Volunteer Driver Network</h1>
-        <h2>Registered Volunteers</h2>
-        <ul>
-            {% for volunteer in volunteers %}
-                <li>Name: {{ volunteer.name }}, Contact: {{ volunteer.contact }}, Availability: {{ volunteer.availability }}</li>
-            {% endfor %}
-        </ul>
-        <br>
-       
 
+    <div class="container about-section">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-text">
+                    <h2>Our Fleet and Service Areas</h2>
+                    <p>We offer reliable and safe transportation for elderly individuals across Hyderabad. Here are the details:</p>
+                </div>
+
+                <div class="vehicle-info">
+                    <h3>Available Vehicles</h3>
+                    <ul>
+                        <li>
+                            <strong>Car 1 (SUV)</strong>
+                            <p>Number Plate: XYZ 1234</p>
+                            <p>Type: SWIFT</p>
+                            <p>Areas Covered: Downtown Hyderabad, Hitech City, Kukatpally</p>
+                        </li>
+                        <li>
+                            <strong>Car 2 (Minivan)</strong>
+                            <p>Number Plate: ABC 5678</p>
+                            <p>Type: SWIFT</p>
+                            <p>Areas Covered: Banjara Hills, Ameerpet, Secunderabad</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="areas-covered">
+                    <h3>Service Areas in Hyderabad</h3>
+                    <ul>
+                        <li>Downtown Hyderabad</li>
+                        <li>Hitech City</li>
+                        <li>Kukatpally</li>
+                        <li>Banjara Hills</li>
+                        <li>Ameerpet</li>
+                        <li>Secunderabad</li>
+                        <li>Old City (Charminar area)</li>
+                        <li>Begumpet</li>
+                    </ul>
+                </div>
+
+                <p class="cta-text">Need a ride? <strong>Contact us today!</strong></p>
+            </div>
+
+            <div class="col-md-6">
+                <div class="about-image">
+                    <img src="https://financialexpresswpcontent.s3.amazonaws.com/uploads/2018/06/Swift-Generations-Main-2-620x413.png" alt="car image">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-light text-center py-4">
         <p>&copy; 2025 Volunteer Driver Network | Support: support@volunteerdriver.com</p>
